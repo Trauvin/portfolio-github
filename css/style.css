@@ -1,0 +1,132 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+body,
+p,
+h1,
+ul,
+li,
+blockquote,
+img {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --color-white: #fff;
+  --text-color: #0f5d62;
+  --mt-section: 1.875rem;
+}
+
+/* Contato */
+.header-bg {
+  background: #204345;
+  padding: 10px calc((100% - 960px) / 2);
+}
+
+.contato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+/* Main */
+.content {
+  padding: 0px calc((100% - 960px) / 2);
+  background: var(--text-color);
+  height: 500px;
+  display: grid;
+  grid-template-columns: 200px 3fr 1fr;
+  grid-template-areas: "lista" "conhecimentos" "sobre";
+}
+
+.lista-icones {
+  padding-top: var(--mt-section);
+  display: flex;
+  flex-direction: column;
+  grid-area: "lista";
+}
+
+.lista-icones li a {
+  display: block;
+  margin: 0 auto 30px 0;
+}
+
+.conhecimentos {
+  display: block;
+  margin-top: var(--mt-section);
+  width: 250px;
+  height: 350px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+}
+
+.conhecimentos p {
+  color: var(--text-color);
+  max-width: 250px;
+  font-size: 1.3rem;
+}
+
+.sobre {
+  margin-top: var(--mt-section);
+}
+.sobre img {
+  display: block;
+  margin: 0 auto;
+}
+
+.nome {
+  width: 200px;
+  height: 50px;
+  background: #fff;
+  /* padding: 20px; */
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nome h3 {
+  text-align: center;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.nome h3::before {
+  content: "";
+  width: 5px;
+  height: 16px;
+  margin: 0 5px 0 5px;
+  background: #204345;
+  display: inline-block;
+}
+
+.descricao {
+  display: block;
+  width: 200px;
+  height: 150px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.descricao p {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-style: italic;
+}
