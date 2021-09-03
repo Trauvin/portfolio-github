@@ -128,16 +128,16 @@ a {
 .curiosidades {
   padding: 10px calc((100% - 960px) / 2);
   background: #0f5d62;
-  height: 1000px;
+  min-height: 400px;
 }
 
-.curiosidades h2 {
+.curioso-lista h2 {
   font-size: 3rem;
   line-height: 0;
   color: var(--color-white);
 }
 
-.curiosidades h2::after {
+.curioso-lista h2::after {
   content: "";
   width: 80px;
   height: 3px;
@@ -152,8 +152,110 @@ a {
   font-size: 1.5rem;
 }
 
+.curioso-lista dt::before {
+  content: "";
+  width: 20px;
+  height: 10px;
+  display: inline-block;
+  background: #204345;
+  margin: 0 10px 0 10px;
+}
+
+.curioso-lista dt::after {
+  content: "▼";
+  color: #204345;
+  margin-left: 10px;
+}
+
+.curioso-lista dt.ativo::after {
+  content: "▲";
+}
+
 .curioso-lista dd {
-  padding: 1rem 0 1rem 0;
+  padding-top: 10px;
   color: var(--color-white);
   font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.curioso-lista dd {
+  display: none;
+}
+
+.curioso-lista dd.ativo {
+  display: block;
+  animation: slideDown 1s forwards;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 90px;
+}
+
+.certificados h2 {
+  font-size: 3rem;
+  line-height: 0;
+  color: var(--color-white);
+}
+
+.certificados h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  display: block;
+  margin: 30px 10px;
+  background: #fff;
+}
+
+.certificados {
+  margin-top: 10px;
+}
+
+.certificados ul li {
+  padding-top: 10px;
+}
+
+.certificados li a {
+  color: var(--color-white);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.certificados li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: #01d9e7;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin-right: 10px;
+}
+
+.certificados li a:hover {
+  color: #01d9e7;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #204345;
+  padding: 10px calc((100% - 960px) / 2);
+  text-align: center;
+}
+
+.footer p {
+  color: var(--color-white);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
 }
