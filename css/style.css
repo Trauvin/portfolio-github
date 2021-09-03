@@ -309,9 +309,23 @@ a {
 @media (max-width: 680px) {
   .content {
     grid-template-columns: 1fr;
-    /* grid-template-areas:
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
       "lista"
       "conhecimentos"
       "sobre";
-  } */
+    height: 1100px;
+  }
+
+  .lista-icones {
+    grid-area: "lista";
+    flex-direction: row;
+  }
+  .bg {
+    grid-area: "conhecimentos";
+  }
+
+  .sobre {
+    grid-area: "sobre";
+  }
 }
