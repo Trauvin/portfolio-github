@@ -60,6 +60,7 @@ a {
   grid-template-columns: 200px 3fr 1fr;
   gap: 20px;
   grid-template-areas: "lista" "conhecimentos" "sobre";
+  font-family: "Raleway", sans-serif;
 }
 
 .lista-icones {
@@ -86,7 +87,6 @@ a {
 .conhecimentos {
   margin-top: var(--mt-section);
   background: #fff;
-
   width: 250px;
   height: 350px;
   padding: 20px;
@@ -97,7 +97,7 @@ a {
 .conhecimentos p {
   color: var(--text-color);
   max-width: 250px;
-  font-size: 1.3rem;
+  font-size: 1.43rem;
 }
 
 .sobre {
